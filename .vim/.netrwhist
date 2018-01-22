@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/jonas/Projects/gource-live'
+let g:netrw_dirhist_2='/home/jonas/Projects/gource-live/.git'
+let g:netrw_dirhist_3='/home/jonas/Projects/gource-live/.git/objects'
+let g:netrw_dirhist_4='/home/jonas/Projects/gource-live/.git'
+let g:netrw_dirhist_5='/home/jonas/.android'
+let g:netrw_dirhist_6='scp://alarm@192.168.1.200/'

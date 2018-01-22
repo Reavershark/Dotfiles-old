@@ -1,0 +1,205 @@
+#i3 config file (v4)
+
+#Modifier key
+set $mod Mod4
+
+#Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+#Gaps
+gaps inner 10
+bindsym $mod+Shift+b    set smart_gaps on
+bindsym $mod+Shift+n    set smart_gaps off
+bindsym $mod+Shift+plus  gaps inner all plus 5
+bindsym $mod+Shift+minus gaps inner all minus 5
+bindsym $mod+Shift+*     gaps inner all set 10
+
+#Spawn a terminal
+bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Shift+Return exec --no-startup-id urxvt -e ranger
+
+#Kill focused window
+bindsym $mod+Shift+q kill
+
+#Screenshot
+bindsym Print exec --no-startup-id gnome-screenshot
+bindsym Shift+Print exec --no-startup-id "gnome-screenshot -a"
+
+#Start rofi (a program launcher)
+bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -show-icons
+bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
+bindsym $mod+Tab exec --no-startup-id rofi -show window -show-icons
+
+#Lockscreen
+bindsym $mod+o exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/Hijou-lock.png
+
+#Reload the configuration file
+bindsym $mod+Shift+c reload
+#Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+#exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Confirm exit' -b 'Exit i3' 'i3-msg exit'"
+
+
+#Window management
+#Change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+m focus right
+bindsym Mod1+Tab focus right
+bindsym Mod1+Shift+Tab focus left
+
+#Alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+#Move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+m move right
+
+#Alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+#Split in horizontal orientation
+bindsym $mod+h split h
+
+#Split in vertical orientation
+bindsym $mod+v split v
+
+#Enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+#Change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+#Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+#Change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+#Switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+#Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+
+#Resize window (you can also use the mouse for that)
+mode "resize" {
+        #These bindings trigger as soon as you enter the resize mode
+
+        #Pressing left will shrink the window’s width.
+        #Pressing right will grow the window’s width.
+        #Pressing up will shrink the window’s height.
+        #Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        #Same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        #Back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+#Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5-
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 1+
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 1-
+bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+
+#Sreen brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+
+#Media control
+bindsym XF86AudioPlay exec --no-startup-id playerctl play
+bindsym XF86AudioPause exec --no-startup-id  playerctl pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+#Disable window borders & titles
+new_window none
+new_float none
+
+#Lock screen
+exec --no-startup-id i3lock -i ~/Dotfiles/Hijou-lock.png
+
+#Numlock on startup
+exec --no-startup-id "numlockx on"
+
+#Wallpaper
+exec --no-startup-id feh --bg-fill ~/Dotfiles/Hijou.png
+
+#Xresources
+exec --no-startup-id xrdb ~/.Xresources
+
+#Compton
+exec --no-startup-id compton
+
+#Polybar
+exec --no-startup-id polybar -c ~/.polybar/config main_bar
+
+#Mouse
+exec --no-startup-id bash /usr/local/bin/nagastart.sh
+
+#Touchpad
+exec --no-startup-id xinput set-button-map "SynPS/2 Synaptics TouchPad" 3 2 1
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Disable While Typing Enabled" 0
+
+#Screen timeout
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s off
+
+#Ramdisk
+exec --no-startup-id mkdir /dev/shm/$USER
+
+#Polkit
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+#Notifications
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+
+#RamBox
+exec --no-startup-id /usr/bin/rambox
+
+#Mega
+exec --no-startup-id sleep 2 && /usr/bin/megasync
