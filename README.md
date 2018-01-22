@@ -1,5 +1,5 @@
 # Dotfiles
-##Dependencies
+## Dependencies
 * xorg-server
 * xorg-xinit
 * i3wm
