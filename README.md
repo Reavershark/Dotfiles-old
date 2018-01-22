@@ -11,6 +11,7 @@
 * oh-my-zsh
 * zsh-autosuggestions
 * vim (gvim package)
+* vim-plug
 * urxvt
 * urxvt-resize-font
 * alsa
