@@ -32,11 +32,7 @@ bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
 bindsym $mod+Tab exec --no-startup-id rofi -show window -show-icons
 
 #Lockscreen
-<<<<<<< HEAD
-bindsym $mod+o exec --no-startup-id i3lock -i ~/Dotfiles/Hijou-lock.png
-=======
 bindsym $mod+o exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
->>>>>>> 07372437f566a905af812eba30eef8ede4e4f6b0
 
 #Reload the configuration file
 bindsym $mod+Shift+c reload
