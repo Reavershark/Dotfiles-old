@@ -42,4 +42,5 @@ hi Normal ctermbg=NONE
 call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'scrooloose/nerdtree'
 call plug#end()
