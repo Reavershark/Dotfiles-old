@@ -173,13 +173,13 @@ exec --no-startup-id feh --bg-fill ~/Dotfiles/Hijou.png
 exec --no-startup-id xrdb ~/.Xresources
 
 #Compton
-exec --no-startup-id compton
+#exec --no-startup-id compton
 
 #Polybar
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
 
 #Mouse
-exec --no-startup-id bash /usr/local/bin/nagastart.sh
+#exec --no-startup-id bash /usr/local/bin/nagastart.sh
 
 #Touchpad
 exec --no-startup-id xinput set-button-map "SynPS/2 Synaptics TouchPad" 3 2 1
@@ -193,13 +193,13 @@ exec --no-startup-id xset s off
 exec --no-startup-id mkdir /dev/shm/$USER
 
 #Polkit
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 #Notifications
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+#exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 
 #RamBox
-exec --no-startup-id /usr/bin/rambox
+#exec --no-startup-id /usr/bin/rambox
 
 #Mega
 exec --no-startup-id sleep 2 && /usr/bin/megasync

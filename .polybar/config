@@ -103,7 +103,7 @@ label-full= %percentage%%
 
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.discharging}
-label-discharging = %time% %percentage%%
+label-discharging = %percentage%%
 
 [module/powermenu]
 type = custom/menu
