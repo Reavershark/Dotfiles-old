@@ -32,7 +32,7 @@ bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
 bindsym $mod+Tab exec --no-startup-id rofi -show window -show-icons
 
 #Lockscreen
-bindsym $mod+o exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/Hijou-lock.png
+bindsym $mod+o exec --no-startup-id i3lock -i ~/Dotfiles/Hijou-lock.png
 
 #Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -147,14 +147,14 @@ bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 1-
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 
 #Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+#bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+#bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 #Media control
-bindsym XF86AudioPlay exec --no-startup-id playerctl play
-bindsym XF86AudioPause exec --no-startup-id  playerctl pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+#bindsym XF86AudioPlay exec --no-startup-id playerctl play
+#bindsym XF86AudioPause exec --no-startup-id  playerctl pause
+#bindsym XF86AudioNext exec --no-startup-id playerctl next
+#bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 #Disable window borders & titles
 new_window none
@@ -164,7 +164,7 @@ new_float none
 exec --no-startup-id i3lock -i ~/Dotfiles/Hijou-lock.png
 
 #Numlock on startup
-exec --no-startup-id "numlockx on"
+#exec --no-startup-id "numlockx on"
 
 #Wallpaper
 exec --no-startup-id feh --bg-fill ~/Dotfiles/Hijou.png
@@ -173,13 +173,13 @@ exec --no-startup-id feh --bg-fill ~/Dotfiles/Hijou.png
 exec --no-startup-id xrdb ~/.Xresources
 
 #Compton
-exec --no-startup-id compton
+#exec --no-startup-id compton
 
 #Polybar
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
 
 #Mouse
-exec --no-startup-id bash /usr/local/bin/nagastart.sh
+#exec --no-startup-id bash /usr/local/bin/nagastart.sh
 
 #Touchpad
 exec --no-startup-id xinput set-button-map "SynPS/2 Synaptics TouchPad" 3 2 1
@@ -193,13 +193,13 @@ exec --no-startup-id xset s off
 exec --no-startup-id mkdir /dev/shm/$USER
 
 #Polkit
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 #Notifications
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+#exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 
 #RamBox
-exec --no-startup-id /usr/bin/rambox
+#exec --no-startup-id /usr/bin/rambox
 
 #Mega
 exec --no-startup-id sleep 2 && /usr/bin/megasync

@@ -3,5 +3,5 @@
 if [ "$(pgrep -x compton)" ]; then
     pkill compton
 else
-    compton -b --config ~/.config/compton.conf
+    compton -b --config ~/.compton.conf
 fi
