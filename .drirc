@@ -1,4 +1,4 @@
-<device screen="0" driver="dri2">
+<device screen="0">
 	<application name="Default">
 		<option name="vblank_mode" value="0"/>
 	</application>

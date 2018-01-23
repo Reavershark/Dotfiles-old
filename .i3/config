@@ -32,7 +32,7 @@ bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
 bindsym $mod+Tab exec --no-startup-id rofi -show window -show-icons
 
 #Lockscreen
-bindsym $mod+o exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/Hijou-lock.png
+bindsym $mod+o exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
 
 #Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -161,13 +161,13 @@ new_window none
 new_float none
 
 #Lock screen
-exec --no-startup-id i3lock -i ~/Dotfiles/Hijou-lock.png
+exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
 
 #Numlock on startup
 exec --no-startup-id "numlockx on"
 
 #Wallpaper
-exec --no-startup-id feh --bg-fill ~/Dotfiles/Hijou.png
+exec --no-startup-id feh --bg-fill ~/Dotfiles/Wallpaper.png
 
 #Xresources
 exec --no-startup-id xrdb ~/.Xresources
