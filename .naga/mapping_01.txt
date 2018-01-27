@@ -4,4 +4,6 @@
 4 - click=8
 5 - click=9
 6 - click=7
+7 - key=XF86AudioRaiseVolume
+8 - key=XF86AudioLowerVolume
 12 - chmap=mapping_02.txt
