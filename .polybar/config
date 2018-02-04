@@ -130,10 +130,10 @@ menu-2-0 = Power off
 menu-2-0-exec = shutdown 0 &
 
 menu-3-0 = Suspend
-menu-3-0-exec = i3lock-fancy && systemctl suspend &
+menu-3-0-exec = i3lock -i ~/Dotfiles/Wallpaper-lock.png && systemctl suspend &
 
 menu-4-0 = Hibernate
-menu-4-0-exec = i3lock-fancy && systemctl hibernate &
+menu-4-0-exec = i3lock -i ~/Dotfiles/Wallpaper-lock.png && systemctl hibernate &
 
 [settings]
 screenchange-reload = true
