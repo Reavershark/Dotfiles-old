@@ -147,30 +147,33 @@ bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 1-
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 
 #Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+#bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+#bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 #Media control
-bindsym XF86AudioPlay exec --no-startup-id playerctl play
-bindsym XF86AudioPause exec --no-startup-id  playerctl pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+#bindsym XF86AudioPlay exec --no-startup-id playerctl play
+#bindsym XF86AudioPause exec --no-startup-id  playerctl pause
+#bindsym XF86AudioNext exec --no-startup-id playerctl next
+#bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 #Disable window borders & titles
 new_window none
 new_float none
 
 #Lock screen
-exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
+#exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
 
 #Numlock on startup
-exec --no-startup-id "numlockx on"
+#exec --no-startup-id "numlockx on"
 
 #Wallpaper
 exec --no-startup-id feh --bg-fill ~/Dotfiles/Wallpaper.png
 
 #Xresources
 exec --no-startup-id xrdb ~/.Xresources
+
+#Nouveau
+exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
 
 #Compton
 exec --no-startup-id compton
@@ -182,8 +185,8 @@ exec --no-startup-id polybar -c ~/.polybar/config main_bar
 exec --no-startup-id bash /usr/local/bin/nagastart.sh
 
 #Touchpad
-exec --no-startup-id xinput set-button-map "SynPS/2 Synaptics TouchPad" 3 2 1
-exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Disable While Typing Enabled" 0
+#exec --no-startup-id xinput set-button-map "SynPS/2 Synaptics TouchPad" 3 2 1
+#exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Disable While Typing Enabled" 0
 
 #Screen timeout
 exec --no-startup-id xset -dpms

@@ -9,7 +9,7 @@ full 		= #dddddd
 discharging 	= #88aaff
 
 [bar/main_bar]
-monitor = ${env:MONITOR:LVDS-1}
+monitor = ${env:MONITOR:HDMI-1}
 bottom = false
 width = 100%
 height = 20
