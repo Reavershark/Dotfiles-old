@@ -87,24 +87,6 @@ type = internal/volume
 master-soundcard = default
 format-volume-underline = ${colors.volume}
 
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = AC0
-full-at = 100
-
-format-charging = <label-charging>
-format-charging-underline = ${colors.charging}
-label-charging = %percentage%%
-
-format-full= <label-full>
-format-full-underline = ${colors.full}
-label-full= %percentage%%
-
-format-discharging = <label-discharging>
-format-discharging-underline = ${colors.discharging}
-label-discharging = %percentage%%
-
 [module/powermenu]
 type = custom/menu
 expand-right = true
