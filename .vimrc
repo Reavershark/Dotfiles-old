@@ -25,6 +25,10 @@ set clipboard=unnamedplus
 "IgNoRe CaSe
 set ic!
 
+"wrap
+set breakindent
+set linebreak
+
 "Smart command tab
 set nocompatible
 set wildmenu
