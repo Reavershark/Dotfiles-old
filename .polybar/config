@@ -56,7 +56,7 @@ label-unfocused = %index%
 label-unfocused-padding = 2
 
 label-visible = %index%
-label-visible-underline = ${colors.foreground}
+label-visible-underline = ${colors.darker}
 label-visible-padding = 4
 
 label-urgent = %index%
