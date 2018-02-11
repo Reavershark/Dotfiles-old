@@ -17,6 +17,7 @@ bindsym $mod+Shift+*     gaps inner all set 10
 #Spawn a terminal
 bindsym $mod+Return exec --no-startup-id urxvt
 bindsym $mod+Shift+Return exec --no-startup-id urxvt -e ranger
+bindsym $mod+Ctrl+Return exec --no-startup-id urxvt -e tmux new-session -A -s main
 
 #Kill focused window
 bindsym $mod+Shift+q kill
