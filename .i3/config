@@ -202,8 +202,5 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 #RamBox
 exec --no-startup-id /usr/bin/rambox --hidden
 
-#KdeConnect
-exec --no-startup-id /usr/lib/kdeconnectd
-
 #Mega
 exec --no-startup-id sleep 2 && /usr/bin/megasync
