@@ -9,9 +9,11 @@
     <property name="known_applications" type="array">
       <value type="string" value="Electron"/>
       <value type="string" value="Haguichi"/>
+      <value type="string" value="KDE Connect"/>
       <value type="string" value="MEGAsync"/>
       <value type="string" value="notify-send"/>
       <value type="string" value="org.gnome.Nautilus"/>
+      <value type="string" value="Thunderbird"/>
       <value type="string" value="Transmission"/>
       <value type="string" value="Xfce4-notifyd settings"/>
     </property>
