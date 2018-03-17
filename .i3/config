@@ -180,7 +180,7 @@ exec --no-startup-id compton
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
 
 #Wal
-exec --no-startup-id wal -iq ~/Dotfiles/Wallpaper.*
+exec --no-startup-id wal -q -i ~/Dotfiles/Wallpaper.*
 
 #Mouse
 exec --no-startup-id bash /usr/local/bin/nagastart.sh
