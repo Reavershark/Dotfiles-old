@@ -57,5 +57,5 @@ URxvt.keysym.Control-Right:    \033[1;5C
 rofi.lines:		18
 rofi.modi:		window,drun,run,ssh
 rofi.font:		Monospace Regular 12
-rofi.theme:		/usr/share/rofi/themes/Monokai.rasi
+rofi.theme:		~/.cache/wal/colors-rofi-dark.rasi
 rofi.drun-icon-theme:	Paper
