@@ -36,6 +36,7 @@ set wildmode=full
 
 "4 spaces tabs
 set expandtab
+set tw=4
 
 "NerdTree binding
 map <C-n> :NERDTreeToggle<CR>
