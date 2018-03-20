@@ -34,6 +34,9 @@ set nocompatible
 set wildmenu
 set wildmode=full
 
+"4 spaces tabs
+set expandtab
+
 "NerdTree binding
 map <C-n> :NERDTreeToggle<CR>
 
