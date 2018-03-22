@@ -34,7 +34,7 @@ modules-right = compton date battery volume powermenu
 
 tray-position = right
 tray-padding = 9
-tray-transparent = false
+tray-transparent = true
 tray-offset-y = 0%
 tray-offset-x = 0%
 tray-maxsize = 18
