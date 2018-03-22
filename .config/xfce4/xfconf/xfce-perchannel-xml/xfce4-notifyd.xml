@@ -7,6 +7,7 @@
   <property name="log-level-apps" type="uint" value="0"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="caja"/>
       <value type="string" value="Electron"/>
       <value type="string" value="Haguichi"/>
       <value type="string" value="KDE Connect"/>
