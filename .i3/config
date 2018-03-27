@@ -181,7 +181,7 @@ exec --no-startup-id compton -b --paint-on-overlay --unredir-if-possible --backe
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
 
 #Wal
-exec --no-startup-id wal -q -g -i ~/Dotfiles/Wallpaper.*
+exec --no-startup-id wal -q -i ~/Dotfiles/Wallpaper.*
 exec --no-startup-id wal_steam -w
 
 #Mouse
@@ -205,7 +205,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 
 #RamBox
-exec --no-startup-id /usr/bin/rambox
+#exec --no-startup-id /usr/bin/rambox
 
 #Mega
 exec --no-startup-id sleep 2 && /usr/bin/megasync
