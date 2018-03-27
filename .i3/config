@@ -180,7 +180,7 @@ exec --no-startup-id compton
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
 
 #Wal
-exec --no-startup-id wal -qg -i ~/Dotfiles/Wallpaper.*
+exec --no-startup-id wal -q -i ~/Dotfiles/Wallpaper.*
 exec --no-startup-id wal_steam -w
 
 #Mouse
