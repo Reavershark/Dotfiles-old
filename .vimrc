@@ -43,7 +43,7 @@ set sw=4
 map <C-n> :NERDTreeToggle<CR>
 
 "RGB
-colors monokai
+"colors monokai
 syntax enable
 hi Normal ctermbg=NONE
 
