@@ -167,9 +167,6 @@ exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
 #Numlock on startup
 exec --no-startup-id "numlockx on"
 
-#Wallpaper
-exec --no-startup-id feh --bg-fill ~/Dotfiles/Wallpaper.*
-
 #Xresources
 exec --no-startup-id xrdb ~/.Xresources
 
@@ -178,6 +175,10 @@ exec --no-startup-id compton
 
 #Polybar
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
+
+#Wal
+exec --no-startup-id wal -q -i ~/Dotfiles/Wallpaper.*
+#exec --no-startup-id wal_steam -w
 
 #Mouse
 exec --no-startup-id bash /usr/local/bin/nagastart.sh
