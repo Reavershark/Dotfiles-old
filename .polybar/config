@@ -1,12 +1,12 @@
 [colors]
-background 	= #001e1e1e
-foreground 	= #dddddd
-darker		= #888888
-urgent		= #ffffff
-volume		= #ce0e05
-charging	= #c5c8c6
-full 		= #dddddd
-discharging 	= #88aaff
+background 	= #00000000
+foreground 	= ${xrdb:color7}
+darker		= ${xrdb:color8}
+urgent		= ${xrdb:color15}
+volume		= ${xrdb:color1}
+charging	= ${xrdb:color6}
+full 		= ${xrdb:color7}
+discharging 	= ${xrdb:color7}
 
 [bar/main_bar]
 monitor = ${env:MONITOR:LVDS-1}
@@ -30,7 +30,7 @@ module-margin-right = 2
 font-0 = dejavu-sans-mono:fontformat=truetype:size=11;1
 
 modules-left = i3 xwindow
-modules-right = compton date battery volume powermenu
+modules-right = cpu memory compton date battery volume powermenu
 
 tray-position = right
 tray-padding = 9
@@ -56,7 +56,7 @@ label-unfocused = %index%
 label-unfocused-padding = 2
 
 label-visible = %index%
-label-visible-underline = ${colors.foreground}
+label-visible-underline = ${colors.darker}
 label-visible-padding = 4
 
 label-urgent = %index%
@@ -69,6 +69,17 @@ label = %title:0:65:...%
 label-padding = 2
 label-foreground = ${colors.darker}
 label-maxlen = 0
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+label-foreground = ${colors.darker}
+
+[module/memory]
+type = internal/memory
+interval = 3
+label = %gb_used%
+label-foreground = ${colors.darker}
 
 [module/compton]
 type = custom/script

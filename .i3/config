@@ -17,6 +17,7 @@ bindsym $mod+Shift+*     gaps inner all set 10
 #Spawn a terminal
 bindsym $mod+Return exec --no-startup-id urxvt
 bindsym $mod+Shift+Return exec --no-startup-id urxvt -e ranger
+bindsym $mod+Ctrl+Return exec --no-startup-id urxvt -e tmux new-session -A -s main
 
 #Kill focused window
 bindsym $mod+Shift+q kill
@@ -151,10 +152,10 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 #Media control
-bindsym XF86AudioPlay exec --no-startup-id playerctl play
-bindsym XF86AudioPause exec --no-startup-id  playerctl pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioPlay exec --no-startup-id cmus-remote -p
+bindsym XF86AudioPause exec --no-startup-id cmus-remote -u
+bindsym XF86AudioNext exec --no-startup-id cmus-remote -n
+bindsym XF86AudioPrev exec --no-startup-id cmus-remote -r
 
 #Disable window borders & titles
 new_window none
@@ -166,9 +167,6 @@ exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
 #Numlock on startup
 #exec --no-startup-id "numlockx on"
 
-#Wallpaper
-exec --no-startup-id feh --bg-fill ~/Dotfiles/Wallpaper.png
-
 #Xresources
 exec --no-startup-id xrdb ~/.Xresources
 
@@ -177,6 +175,10 @@ exec --no-startup-id compton
 
 #Polybar
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
+
+#Wal
+exec --no-startup-id wal -q -i ~/Dotfiles/Wallpaper.*
+#exec --no-startup-id wal_steam -w
 
 #Mouse
 #exec --no-startup-id bash /usr/local/bin/nagastart.sh

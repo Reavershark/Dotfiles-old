@@ -42,18 +42,20 @@ URxvt.font: 		xft:monospace:size=11
 URxvt.letterSpace:	-1
 URxvt.scrollBar:	false
 URxvt.cursorColor:	white
-URxvt.perl-ext-common:	default,matcher,resize-font
+URxvt.perl-ext-common:	default,matcher,resize-font,keyboard-select
 URxvt.perl-lib:		$HOME/.config/Scripts
 URxvt.url-launcher:	/usr/bin/xdg-open
 URxvt.matcher.button:	1
 URxvt.resize-font.smaller:	C-Down
 URxvt.resize-font.bigger:	C-Up
-
+URxvt.keysym.M-Escape:	perl:keyboard-select:activate
 URxvt.colorUL:		#4682B4
+URxvt.keysym.Control-Left:    \033[1;5D
+URxvt.keysym.Control-Right:    \033[1;5C
 
 ! rofi
 rofi.lines:		18
 rofi.modi:		window,drun,run,ssh
 rofi.font:		Monospace Regular 12
-rofi.theme:		/usr/share/rofi/themes/Monokai.rasi
+rofi.theme:		~/.cache/wal/colors-rofi-dark.rasi
 rofi.drun-icon-theme:	Paper

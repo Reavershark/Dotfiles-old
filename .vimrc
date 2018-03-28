@@ -25,10 +25,19 @@ set clipboard=unnamedplus
 "IgNoRe CaSe
 set ic!
 
+"wrap
+set breakindent
+set linebreak
+
 "Smart command tab
 set nocompatible
 set wildmenu
 set wildmode=full
+
+"4 spaces tabs
+set expandtab
+set ts=4
+set sw=4
 
 "NerdTree binding
 map <C-n> :NERDTreeToggle<CR>
@@ -43,4 +52,5 @@ call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'scrooloose/nerdtree'
+Plug 'dylanaraps/wal.vim'
 call plug#end()
