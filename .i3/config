@@ -30,7 +30,7 @@ bindsym Shift+Print exec --no-startup-id "gnome-screenshot -a"
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -show-icons
 bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
-bindsym $mod+Tab exec --no-startup-id rofi -show window -show-icons
+bindsym $mod+Tab focus right
 
 #Lockscreen
 bindsym $mod+o exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
