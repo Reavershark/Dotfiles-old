@@ -165,9 +165,6 @@ new_float none
 #Numlock on startup
 exec --no-startup-id "numlockx on"
 
-#Wallpaper
-#exec --no-startup-id feh --bg-fill ~/Dotfiles/Wallpaper.*
-
 #Xresources
 exec --no-startup-id xrdb ~/.Xresources
 
