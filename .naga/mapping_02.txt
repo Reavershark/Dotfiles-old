@@ -4,7 +4,7 @@
 4 - key=4
 5 - key=5
 6 - key=6
-7 - click=8
-8 - click=9
-9 - click=7
+7 - key=7
+8 - key=8
+9 - key=9
 12 - chmap=mapping_01.txt
