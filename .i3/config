@@ -192,6 +192,10 @@ exec --no-startup-id bash /usr/local/bin/nagastart.sh
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
 
+#Key repeat
+networkmanager
+exec --no-startup-id xset r rate 250 25
+
 #Ramdisk
 exec --no-startup-id mkdir /dev/shm/$USER
 
