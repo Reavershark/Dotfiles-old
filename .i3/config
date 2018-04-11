@@ -192,7 +192,6 @@ exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
 
 #Key repeat
-networkmanager
 exec --no-startup-id xset r rate 250 25
 
 #Ramdisk
