@@ -165,14 +165,14 @@ new_float none
 #Numlock on startup
 exec --no-startup-id "numlockx on"
 
+#Dpi
+exec --no-startup-id xrandr --dpi 192
+
 #Xresources
 exec --no-startup-id xrdb ~/.Xresources
 
-#Nouveau
-exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
-
 #Compton
-exec --no-startup-id compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil
+exec --no-startup-id compton -b
 
 #Polybar
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
