@@ -45,7 +45,7 @@ Xft.rgba: rgb
 *color15:#f1f1f0
 
 URxvt.intensityStyles:	false
-!!URxvt.background:       [70]#000000
+URxvt.background:       [85]#000000
 URxvt.depth:		32
 URxvt.font: 		xft:monospace:size=11
 URxvt.letterSpace:	-1
