@@ -140,7 +140,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#Pulse Audio controls
+#Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5-
 bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 1+
