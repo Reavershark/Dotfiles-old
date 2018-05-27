@@ -50,6 +50,7 @@ URxvt.depth:		32
 URxvt.font: 		xft:monospace:size=11
 URxvt.letterSpace:	-1
 URxvt.scrollBar:	false
+URxvt.saveLines:	100000
 URxvt.cursorColor:	white
 URxvt.perl-ext-common:	default,matcher,resize-font,keyboard-select
 URxvt.perl-lib:		$HOME/.config/Scripts
