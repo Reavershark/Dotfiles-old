@@ -37,8 +37,6 @@ bindsym $mod+o exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
 
 #Reload the configuration file
 bindsym $mod+Shift+c reload
-#Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
 #exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Confirm exit' -b 'Exit i3' 'i3-msg exit'"
 
@@ -87,6 +85,10 @@ bindsym $mod+Shift+space floating toggle
 
 #Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
+#Scratchpad
+bindsym $mod+shift+r move scratchpad
+bindsym $mod+r scratchpad show; floating disable
 
 #Switch to workspace
 bindsym $mod+1 workspace 1
