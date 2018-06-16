@@ -8,8 +8,6 @@ floating_modifier $mod
 
 #Gaps
 gaps inner 10
-bindsym $mod+Shift+b    set smart_gaps on
-bindsym $mod+Shift+n    set smart_gaps off
 bindsym $mod+Shift+plus  gaps inner all plus 5
 bindsym $mod+Shift+minus gaps inner all minus 5
 bindsym $mod+Shift+*     gaps inner all set 10
