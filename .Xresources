@@ -65,8 +65,9 @@ URxvt.keysym.Control-Right:    \033[1;5C
 
 ! rofi
 rofi.lines:		18
-rofi.modi:		window,drun,run,ssh
+rofi.modi:		drun,run,ssh
 rofi.font:		Monospace Regular 12
 rofi.dpi:       192
 rofi.theme:		~/.cache/wal/colors-rofi-dark.rasi
 rofi.drun-icon-theme:	Paper
+rofi.sidebar-mode: true
