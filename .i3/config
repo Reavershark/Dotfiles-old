@@ -137,7 +137,7 @@ new_window none
 new_float none
 
 #Lock screen
-exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
+#exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
 
 #Numlock on startup
 exec --no-startup-id "numlockx on"
