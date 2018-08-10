@@ -53,5 +53,4 @@ Plug 'sheerun/vim-polyglot'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'scrooloose/nerdtree'
 Plug 'dylanaraps/wal.vim'
-Plug 'valloric/youcompleteme'
 call plug#end()
