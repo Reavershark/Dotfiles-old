@@ -38,7 +38,7 @@ tray-padding = 9
 tray-transparent = true
 tray-offset-y = 0%
 tray-offset-x = 0%
-tray-maxsize = 18
+tray-maxsize = 100
 tray-detached = false
 
 wm-restack = i3
