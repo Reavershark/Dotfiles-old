@@ -153,7 +153,6 @@ exec --no-startup-id polybar -c ~/.polybar/config main_bar
 
 #Wal
 exec --no-startup-id wal -q -i ~/Dotfiles/Wallpaper.* --saturate 0.6
-exec --no-startup-id wal_steam -w
 
 #Mouse
 exec --no-startup-id bash /usr/local/bin/nagastart.sh
