@@ -86,6 +86,7 @@ label-foreground = ${colors.darker}
 type = custom/script
 exec = echo '#'
 click-left = ~/.polybar/compton.sh
+click-right = wineserver -kw
 
 [module/date]
 type = internal/date
