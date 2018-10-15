@@ -184,8 +184,8 @@ exec --no-startup-id mkdir /dev/shm/$USER
 #Notifications
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 
-#RamBox
-#exec --no-startup-id /usr/bin/rambox
+#Discord
+exec --no-startup-id env PULSE_LATENCY_MSEC=100 sh -c "until wmctrl -F -c 'Discord'; do sleep 0.1; done & discord"
 
 #Mega
 exec --no-startup-id sleep 2 && /usr/bin/megasync
