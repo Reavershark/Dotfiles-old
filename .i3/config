@@ -114,17 +114,17 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 
 #Audio controls
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5+
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5-
-#bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 1+
-#bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 1-
-#bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5-
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 1+
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 1-
+bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1%
-bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+#bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1%
+#bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1%
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 #Sreen brightness controls
 #bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
@@ -151,6 +151,9 @@ exec --no-startup-id xrandr --dpi 192
 
 #Xresources
 exec --no-startup-id xrdb ~/.Xresources
+
+#Jack
+exec --no-startup-id cadence-session-start --maybe-system-start
 
 #Compton
 exec --no-startup-id compton -b
@@ -185,7 +188,7 @@ exec --no-startup-id mkdir /dev/shm/$USER
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 
 #Discord
-exec --no-startup-id env PULSE_LATENCY_MSEC=100 sh -c "until wmctrl -F -c 'Discord'; do sleep 0.1; done & discord"
+#exec --no-startup-id env PULSE_LATENCY_MSEC=100 sh -c "until wmctrl -F -c 'Discord'; do sleep 0.1; done & discord"
 
 #Mega
 exec --no-startup-id sleep 2 && /usr/bin/megasync
