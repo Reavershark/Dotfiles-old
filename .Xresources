@@ -9,7 +9,7 @@ Xft.rgba: rgb
 
 *foreground: #ffffff
 *foreground_bold: #a8a19f
-*cursor: #a8a19f
+!*cursor: #a8a19f
 *background: #1b1918
 
 ! Black + DarkGrey

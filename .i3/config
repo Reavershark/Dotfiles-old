@@ -33,6 +33,9 @@ bindsym $mod+Tab focus right
 #Lockscreen
 bindsym $mod+o exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
 
+#X2X
+bindsym $mod+shift+x exec --no-startup-id ssh jonas-laptop -Y "x2x -west -to :0"
+
 #Reload the configuration file
 bindsym $mod+Shift+c reload
 #exit i3 (logs you out of your X session)
@@ -148,6 +151,9 @@ exec --no-startup-id "numlockx on"
 
 #Dpi
 exec --no-startup-id xrandr --dpi 192
+
+#Freesync
+exec --no-startup-id xrandr --output DisplayPort-0 --set "freesync" 1
 
 #Xresources
 exec --no-startup-id xrdb ~/.Xresources
