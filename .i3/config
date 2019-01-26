@@ -10,7 +10,7 @@ floating_modifier $mod
 gaps inner 10
 bindsym $mod+Shift+plus  gaps inner all plus 5
 bindsym $mod+Shift+minus gaps inner all minus 5
-bindsym $mod+Shift+*     gaps inner all set 10
+bindsym $mod+Shift+*     gaps inner all set 15
 
 #Spawn a terminal
 bindsym $mod+Return exec --no-startup-id urxvt
@@ -115,6 +115,8 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+#Pause
+bindsym Pause exec --no-startup-id ~/.i3/pause.sh
 
 #Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5+
@@ -166,6 +168,21 @@ exec --no-startup-id compton -b
 
 #Polybar
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
+
+#Plasma integration
+exec --no-startup-id wmctrl -c Plasma
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+
+## Avoid tiling popups, dropdown windows from plasma
+# for the first time, manually resize them, i3 will remember the setting for floating windows
+for_window [class="plasmashell"] floating enable
+for_window [class="Plasma"] floating enable, border none
+for_window [title="plasma-desktop"] floating enable, border none
+for_window [title="win7"] floating enable, border none
+for_window [class="krunner"] floating enable, border none
+for_window [class="Kmix"] floating enable, border none
+for_window [class="Klipper"] floating enable, border none
+for_window [class="Plasmoidviewer"] floating enable, border none
 
 #Wal
 exec --no-startup-id wal -q -i ~/Dotfiles/Wallpaper.* --saturate 0.6
