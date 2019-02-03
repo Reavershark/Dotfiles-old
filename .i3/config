@@ -164,7 +164,7 @@ exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id cadence-session-start --maybe-system-start
 
 #Compton
-exec --no-startup-id compton -b
+exec --no-startup-id compton -b --conf ~/.compton.conf
 
 #Polybar
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
