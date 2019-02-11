@@ -9,7 +9,6 @@ full 		= ${xrdb:color7}
 discharging 	= ${xrdb:color7}
 
 [bar/main_bar]
-monitor = ${env:MONITOR:LVDS-1}
 bottom = false
 width = 100%
 height = 20
