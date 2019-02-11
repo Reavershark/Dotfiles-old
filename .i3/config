@@ -3,6 +3,19 @@
 #Modifier key
 set $mod Mod1
 
+#Colors
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color0 #f0f0f0
+set_from_resource $focus i3wm.color2 #f0f0f0
+
+client.focused          $focus  $bg     $fg  $focus    $focus
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
+
 #Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -21,13 +34,15 @@ bindsym $mod+Ctrl+Return exec --no-startup-id urxvt -e tmux new-session -A -s ma
 bindsym $mod+Shift+q kill
 
 #Screenshot
-bindsym Print exec --no-startup-id gnome-screenshot
-bindsym Shift+Print exec --no-startup-id "gnome-screenshot -a"
+bindsym Print exec --no-startup-id screenshot fullscreen
+bindsym Shift+Print exec --no-startup-id screenshot region
+bindsym Ctrl+Print exec --no-startup-id screenshot objects
 
 #Start rofi (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -show-icons
 bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
+bindsym $mod+b exec --no-startup-id setbg
 bindsym $mod+Tab focus right
 
 #Lockscreen
@@ -142,8 +157,9 @@ bindsym XF86AudioNext exec --no-startup-id cmus-remote -n
 bindsym XF86AudioPrev exec --no-startup-id cmus-remote -r
 
 #Disable window borders & titles
-new_window none
-new_float none
+new_window pixel 1
+new_float pixel 1
+default_border pixel 1
 
 #Lock screen
 #exec --no-startup-id i3lock -i ~/Dotfiles/Wallpaper-lock.png
