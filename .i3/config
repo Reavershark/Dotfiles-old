@@ -171,7 +171,7 @@ exec --no-startup-id "numlockx on"
 exec --no-startup-id xrandr --dpi 192
 
 #Freesync
-exec --no-startup-id xrandr --output DisplayPort-0 --set "freesync" 1
+exec --no-startup-id xrandr --output DisplayPort-0 --set "TearFree" auto
 
 #Xresources
 exec --no-startup-id xrdb ~/.Xresources
@@ -188,6 +188,9 @@ exec --no-startup-id polybar -c ~/.polybar/config main_bar
 #Plasma integration
 exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
+
+#Kde connect
+exec --no-startup-id /usr/lib/kdeconnectd
 
 ## Avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
