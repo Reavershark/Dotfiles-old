@@ -31,7 +31,7 @@ module-margin-right = 2
 font-0 = dejavu-sans-mono:fontformat=truetype:size=11;1
 
 modules-left = i3 xwindow
-modules-right = cpu memory compton date volume powermenu
+modules-right = cpu memory battery-android hash date volume powermenu
 
 tray-position = right
 tray-padding = 9
@@ -82,10 +82,16 @@ interval = 3
 label = %gb_used%
 label-foreground = ${colors.darker}
 
-[module/compton]
+[module/battery-android]
+type = custom/script
+exec = ~/.polybar/battery-android.sh
+interval = 10
+label-foreground = ${colors.darker}
+
+[module/hash]
 type = custom/script
 exec = echo '#'
-click-left = ~/.polybar/compton.sh
+click-left = ~/.polybar/tearfree.sh
 click-right = wineserver -kw
 
 [module/date]

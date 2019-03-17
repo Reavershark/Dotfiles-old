@@ -57,7 +57,7 @@ compinit
 export EDITOR='vim'
 
 #Hide '%'
-unsetopt PROMPT_SP
+#unsetopt PROMPT_SP
 
 # Alias
 alias pss="pacaur -Ss"
