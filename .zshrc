@@ -60,12 +60,26 @@ export EDITOR='vim'
 #unsetopt PROMPT_SP
 
 # Alias
-alias pss="pacaur -Ss"
-alias pqs="pacaur -Qs"
+alias pss="yay -Ss"
+alias pqs="yay -Qs"
 alias mkdir="mkdir -pv"
 alias la="ls -lA"
 alias l="ls -lAh"
 alias v="vim"
+alias vv="vim ~/vimwiki/index.wiki"
 alias rcp="rsync --progress --size-only --inplace --recursive --verbose"
 alias weather="curl wttr.in/brugge --silent | head -n37"
 alias wallpaper="wal -i"
+alias proton="STEAM_COMPAT_DATA_PATH=/home/jonas/Games/Steam/steamapps/compatdata/default/ /home/jonas/.steam/steam/compatibilitytools.d/Proton-*-GE/proton"
+
+# Functions
+
+function loop() {
+    while true; do
+        $@
+    done
+}
+
+function vnc() {
+    zsh -c "export DISPLAY=:1 && Xvfb :1 -screen 0 1920x1080x16 & (x11vnc -passwd walrus -q && killall -9 Xvfb) & $1" &>/dev/null & disown %zsh
+}

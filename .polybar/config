@@ -31,7 +31,7 @@ module-margin-right = 2
 font-0 = dejavu-sans-mono:fontformat=truetype:size=11;1
 
 modules-left = i3 xwindow
-modules-right = cpu memory battery-android hash date volume powermenu
+modules-right = cpu memory battery-android spotify hash date volume powermenu
 
 tray-position = right
 tray-padding = 9
@@ -85,7 +85,7 @@ label-foreground = ${colors.darker}
 [module/battery-android]
 type = custom/script
 exec = ~/.polybar/battery-android.sh
-interval = 10
+interval = 5
 label-foreground = ${colors.darker}
 
 [module/hash]
@@ -135,6 +135,14 @@ menu-3-0-exec = i3lock -i ~/Dotfiles/Wallpaper-lock.png && systemctl suspend &
 
 menu-4-0 = Hibernate
 menu-4-0-exec = i3lock -i ~/Dotfiles/Wallpaper-lock.png && systemctl hibernate &
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python /usr/share/polybar/scripts/spotify_status.py -p ',[Paused]' -f '{play_pause} {artist}: {song}'
+label-foreground = ${colors.darker}
 
 [settings]
 screenchange-reload = true
