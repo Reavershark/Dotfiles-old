@@ -29,7 +29,7 @@ module-margin-right = 2
 font-0 = dejavu-sans-mono:fontformat=truetype:size=11;1
 
 modules-left = i3 xwindow
-modules-right = cpu memory compton date battery volume powermenu
+modules-right = cpu memory battery-android compton date battery volume powermenu
 
 tray-position = right
 tray-padding = 9
@@ -78,6 +78,12 @@ label-foreground = ${colors.darker}
 type = internal/memory
 interval = 3
 label = %gb_used%
+label-foreground = ${colors.darker}
+
+[module/battery-android]
+type = custom/script
+exec = ~/.polybar/battery-android.sh
+interval = 5
 label-foreground = ${colors.darker}
 
 [module/compton]

@@ -38,6 +38,10 @@ set wildmode=full
 set expandtab
 set ts=4
 set sw=4
+autocmd FileType make setlocal noexpandtab
+
+"Make
+set makeprg=make\ -B
 
 "NerdTree binding
 map <C-n> :NERDTreeToggle<CR>
@@ -53,4 +57,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'scrooloose/nerdtree'
 Plug 'dylanaraps/wal.vim'
+Plug 'idanarye/vim-dutyl'
 call plug#end()
+
+colorscheme wal

@@ -162,10 +162,13 @@ exec --no-startup-id "numlockx on"
 exec --no-startup-id xrdb ~/.Xresources
 
 #Compton
-exec --no-startup-id compton
+exec --no-startup-id compton --conf ~/.compton.conf
 
 #Polybar
 exec --no-startup-id polybar -c ~/.polybar/config main_bar
+
+#Kde connect
+exec --no-startup-id /usr/lib/kdeconnectd
 
 #Wal
 exec --no-startup-id wal -q -i ~/Dotfiles/Wallpaper.* --saturate 0.6
@@ -192,6 +195,9 @@ exec --no-startup-id mkdir /dev/shm/$USER
 
 #Notifications
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+
+#nm-applet
+exec --no-startup-id nm-applet
 
 #RamBox
 #exec --no-startup-id /usr/bin/rambox

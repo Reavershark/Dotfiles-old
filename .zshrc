@@ -36,6 +36,10 @@ source $ZSH/oh-my-zsh.sh
 # Autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Fzf
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
 # History file
 HISTFILE=~/.histfile
 HISTSIZE=1000000
@@ -57,11 +61,11 @@ compinit
 export EDITOR='vim'
 
 #Hide '%'
-unsetopt PROMPT_SP
+#unsetopt PROMPT_SP
 
 # Alias
-alias pss="pacaur -Ss"
-alias pqs="pacaur -Qs"
+alias pss="yay -Ss"
+alias pqs="yay -Qs"
 alias mkdir="mkdir -pv"
 alias la="ls -lA"
 alias l="ls -lAh"
@@ -70,3 +74,8 @@ alias rcp="rsync --progress --size-only --inplace --recursive --verbose"
 alias weather="curl wttr.in/brugge --silent | head -n37"
 alias wallpaper="wal -i"
 alias gcsm="git commit -S -m"
+
+function theme() {
+    ZSH_THEME="$1"
+    source $ZSH/oh-my-zsh.sh
+}
