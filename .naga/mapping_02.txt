@@ -7,5 +7,6 @@
 7 - click=1
 8 - click=1
 9 - click=1
-11 - chmap=mapping_01.txt
+10 - chmap=mapping_01.txt
+11 - chmap=mapping_02.txt
 12 - chmap=mapping_03.txt
