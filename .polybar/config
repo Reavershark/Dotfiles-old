@@ -154,7 +154,7 @@ type = custom/script
 interval = 1
 format-prefix = " "
 format = <label>
-exec = python /usr/share/polybar/scripts/spotify_status.py -p ',[Paused]' -f '{play_pause} {artist}: {song}'
+exec = python /usr/share/polybar/scripts/spotify_status.py -p ',[Paused]' -f '{play_pause} {artist} - {song}'
 label-foreground = ${colors.darker}
 
 [settings]
