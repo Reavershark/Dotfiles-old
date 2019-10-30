@@ -250,5 +250,9 @@ for_window [class="Spotify"] move container to workspace 8
 for_window [title="Spotify"] move container to workspace 8
 for_window [title="Spotify Premium"] move container to workspace 8
 
+#Rambox
+for_window [class="Rambox"] move container to workspace 9
+exec --no-startup-id env PULSE_LATENCY_MSEC=100 rambox
+
 #Mega
 exec --no-startup-id sleep 2 && /usr/bin/megasync
