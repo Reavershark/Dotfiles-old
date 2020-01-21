@@ -4,6 +4,9 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 autocmd Filetype tex setlocal nofoldenable
 let g:Tex_ViewRule_pdf = 'evince'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_CompileRule_pdf = 'latexmk -c -pdf -f $*'
+set iskeyword+=:
 :set cmdheight=2
 
 "Omnicomplete
